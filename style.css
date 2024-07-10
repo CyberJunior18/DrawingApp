@@ -3,6 +3,8 @@ body {
     margin: 0;
     background-color: #000000;
     color: #FFFFFF;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
