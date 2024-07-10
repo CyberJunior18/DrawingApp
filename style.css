@@ -33,6 +33,7 @@ canvas {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px 0px; /* Adjust the gap between rows (first value) and columns (second value) */
+    width: fit-content;
 }
 
 
