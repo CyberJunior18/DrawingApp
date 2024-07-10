@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.container {
+    align-items: flex-start;
+}
+
+canvas {
+    border: solid 2px #FFFFFF;
+    margin: 10px;
+    background-color: #FFFFFF;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.radio {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px 0px; /* Adjust the gap between rows (first value) and columns (second value) */
+}
+
+
+
+.radio label {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.radio input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio input[type="radio"] + span {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.radio input[type="radio"] + span::before {
+    content: '';
+    background: #0f0;
+    border-radius: 100%;
+    border: 1px solid rgb(25, 22, 220);
+    width: 1.4em;
+    height: 1.4em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+}
+
+.radio input[type="radio"]:checked + span::before {
+    box-shadow: inset 0 0 0 1em rgb(206, 228, 7);
+    filter: blur(2px);
+}
+input[type="color"],
+input[type="number"],
+input[type="button"] {
+    height: 40px;
+    cursor: pointer;
+    background-color: #000000;
+    border: 2px solid #FFFFFF;
+    color: #00FF00;
+    border-radius: 5px;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+input[type="color"] {
+    padding: 0;
+}
+
+input[type="button"]:hover {
+    background-color: #00FF00;
+    color: #000000;
+}

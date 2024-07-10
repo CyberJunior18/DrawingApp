@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="myCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <div class="button-row">
+                <input type="color" id="colorPicker" value="#000000" />
+                <input type="number" id="thickness" value="15" />
+                <input type="button" value="Undo" id="undo" onclick="undo()" />
+                <input type="button" value="Redo" id="redo" onclick="redo()" />
+                <input type="button" value="Clear" id="clear" onclick="clearCanvas()" />
+                <input type="button" value="Save" id="save" onclick="save()" />
+                <input type="button" value="Draw" id="normal" onclick="normalPainting()" />
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="shape" id="rectangle" onclick="shape('rectangle')" />
+                    <span>Rectangle</span>
+                </label>
+                <label>
+                    <input type="radio" name="shape" id="circle" onclick="shape('circle')" />
+                    <span>Circle</span>
+                </label>
+                <label>
+                    <input type="radio" name="shape" id="triangle" onclick="shape('triangle')" />
+                    <span>Triangle</span>
+                </label>
+                <label>
+                    <input type="radio" name="shape" id="square" onclick="shape('square')" />
+                    <span>Square</span>
+                </label>
+                <label>
+                    <input type="radio" name="shape" id="ellipse" onclick="shape('ellipse')" />
+                    <span>Ellipse</span>
+                </label>
+                <label>
+                    <input type="radio" name="shape" id="parallelogram" onclick="shape('parallelogram')" />
+                    <span>Parallelogram</span>
+                </label>
+                <label>
+                    <input type="radio" name="shape" id="rhombus" onclick="shape('rhombus')" />
+                    <span>Rhombus</span>
+                </label>
+                <label>
+                    <input type="radio" name="shape" id="star" onclick="shape('star')" />
+                    <span>Star</span>
+                </label>
+                <label>
+                    <input type="radio" name="shape" id="hexagon" onclick="shape('hexagon')" />
+                    <span>Hexagon</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
